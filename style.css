@@ -8,7 +8,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Dynamic Backgrounds */
 .default-bg { background: radial-gradient(circle at top right, #1e3c72, #2a5298); }
 .bg-sunny { background: radial-gradient(circle at top right, #ff9966, #ff5e62); }
 .bg-cloudy { background: radial-gradient(circle at top right, #757f9a, #d7dde8); color: #222 !important; }
@@ -56,12 +55,10 @@ body.dark-mode-active {
   font-weight: 500;
 }
 
-/* This fixes the placeholder color (the "Enter city name..." text) */
 .glass-input::placeholder {
   color: rgba(15, 23, 42, 0.5) !important; 
 }
 
-/* This makes the box look active when you click it */
 .glass-input:focus {
   background: rgba(255, 255, 255, 0.4) !important;
   color: #000000 !important;
@@ -69,7 +66,6 @@ body.dark-mode-active {
   outline: none;
 }
 
-/* If you are in Dark Mode, we want the text to be white again */
 body.dark-mode-active .glass-input {
   color: #ffffff !important;
   background: rgba(0, 0, 0, 0.2) !important;
