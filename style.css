@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: white;
+  min-height: 100vh;
+  transition: background 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-x: hidden;
+}
+
+/* Dynamic Backgrounds */
+.default-bg { background: radial-gradient(circle at top right, #1e3c72, #2a5298); }
+.bg-sunny { background: radial-gradient(circle at top right, #ff9966, #ff5e62); }
+.bg-cloudy { background: radial-gradient(circle at top right, #757f9a, #d7dde8); color: #222 !important; }
+.bg-rainy { background: radial-gradient(circle at top right, #000428, #004e92); }
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.history-chip {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 12px 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.history-chip:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(5px);
+}
+
+.glass-input {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white !important;
+  border-radius: 15px 0 0 15px;
+}
+
+body.dark-mode-active {
+  background: #0f172a !important;
+  color: white !important;
+}
+/* FIX FOR INVISIBLE INPUT TEXT */
+.glass-input {
+  background: rgba(255, 255, 255, 0.2) !important; /* Semi-transparent white */
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  color: #0f172a !important; /* This forces the text to be Dark Blue/Black */
+  font-weight: 500;
+}
+
+/* This fixes the placeholder color (the "Enter city name..." text) */
+.glass-input::placeholder {
+  color: rgba(15, 23, 42, 0.5) !important; 
+}
+
+/* This makes the box look active when you click it */
+.glass-input:focus {
+  background: rgba(255, 255, 255, 0.4) !important;
+  color: #000000 !important;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+  outline: none;
+}
+
+/* If you are in Dark Mode, we want the text to be white again */
+body.dark-mode-active .glass-input {
+  color: #ffffff !important;
+  background: rgba(0, 0, 0, 0.2) !important;
+}
+
+body.dark-mode-active .glass-input::placeholder {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
