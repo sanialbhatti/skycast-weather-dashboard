@@ -19,8 +19,6 @@ $(document).ready(function() {
         $(this).text($("body").hasClass("dark-mode-active") ? "☀️ Light Mode" : "🌙 Dark Mode");
     });
 });
-
-// Step 1: Get Lat/Lon from City Name (Free Geocoding)
 async function getCoordinates(city) {
     $("#error").text("");
     $("#loader").removeClass("d-none");
@@ -43,7 +41,6 @@ async function getCoordinates(city) {
     }
 }
 
-// Step 2: Get Weather from Open-Meteo
 async function fetchWeather(lat, lon, name, country) {
     const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,weather_code,wind_speed_10m,uv_index&timezone=auto`;
 
